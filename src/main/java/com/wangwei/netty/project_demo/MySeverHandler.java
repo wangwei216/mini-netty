@@ -10,9 +10,10 @@ import io.netty.channel.SimpleChannelInboundHandler;
  */
 public class MySeverHandler extends SimpleChannelInboundHandler {
 
-    //这个
+    //这个其实是当用户有时间过来的话，就会被workGroup线程组进行调用
     @Override
     protected void channelRead0(ChannelHandlerContext channelHandlerContext, Object o) throws Exception {
 
+        System.out.println("我被调用用了------>"+channelHandlerContext);
     }
 }
